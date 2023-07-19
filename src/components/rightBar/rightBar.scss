@@ -1,5 +1,7 @@
-.rightBar {
+@import "../../style.scss";
 
+.rightBar {
+  @include themify($themes) {
     flex: 3;
     position: sticky;
     top: 70px;
@@ -56,32 +58,32 @@
             }
 
             p {
-              color: themed("textColorSoft");
+              color: themed("textColorsoft");
             }
 
             span {
               font-weight: 500;
               color: themed("textColor");
             }
-          
 
-          .buttons {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            .buttons {
+              display: flex;
+              align-items: center;
+              gap: 10px;
 
-            button {
-              border: none;
-              padding: 5px;
-              color: white;
-              cursor: pointer;
+              button {
+                border: none;
+                padding: 5px;
+                color: whitesmoke;
+                cursor: pointer;
 
-              &:first-child {
-                background-color: #5271ff;
-              }
+                &:first-child {
+                  background-color: #5271ff;
+                }
 
-              &:last-child {
-                background-color: #f0544f;
+                &:last-child {
+                  background-color: #f0544f;
+                }
               }
             }
           }
