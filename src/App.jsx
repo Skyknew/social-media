@@ -14,11 +14,11 @@ import Profile from "./pages/profile/Profile";
 import "./style.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
-//import { AuthContext } from "./context/authContext";
+import { AuthContext } from "./context/authContext";
 
 function App() {
 
-  const currentUser = true;
+  const { currentUser } = useContext(AuthContext);
 
   const { darkMode } =useContext ( DarkModeContext );
 
@@ -85,4 +85,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
